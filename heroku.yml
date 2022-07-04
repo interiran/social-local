@@ -1,0 +1,20 @@
+services:
+  worker:
+    build: .
+    restart: always
+    environment:
+      TELEGRAM_API_TOKEN: "<api-hash>"
+  telegram-bot-api:
+    image: aiogram/telegram-bot-api:latest
+    restart: always
+    environment:
+      TELEGRAM_LOCAL: 1
+      TELEGRAM_API_ID: "16955662"
+      TELEGRAM_API_HASH: "881da3b8a19918d61f92c077f9243b54"
+    volumes:
+      - telegram-bot-api-data:/var/lib/telegram-bot-api
+    ports:
+      - "8081:8081"
+
+volumes:
+  telegram-bot-api-data:

@@ -3,14 +3,13 @@ import logging
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.bot.api import TelegramAPIServer
 from aiogram.types import ContentType
-
 API_TOKEN = '5320973534:AAENM_sFsUMUbNATKWhhDOs2Ndo5OY7D-NQ'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
 # Create private Bot API server endpoints wrapper
-local_server = TelegramAPIServer.from_base('http://localhost')
+local_server = TelegramAPIServer.from_base('https://telegram-bot-api-interiran.cloud.okteto.net')
 
 # Initialize bot with using local server
 bot = Bot(token=API_TOKEN, server=local_server)

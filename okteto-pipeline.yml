@@ -1,4 +1,4 @@
 deploy:
-  - okteto bulid -f docker-compose.yml
+  - okteto build -f docker-compose.yml
 devs:
   - docker-compose.yml

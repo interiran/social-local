@@ -10,7 +10,7 @@ API_TOKEN = '5320973534:AAENM_sFsUMUbNATKWhhDOs2Ndo5OY7D-NQ'
 logging.basicConfig(level=logging.INFO)
 
 # Create private Bot API server endpoints wrapper
-local_server = TelegramAPIServer.from_base('http://localhost:8081')
+local_server = TelegramAPIServer.from_base('http://localhost')
 
 # Initialize bot with using local server
 bot = Bot(token=API_TOKEN, server=local_server)

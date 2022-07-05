@@ -15,7 +15,6 @@ services:
     volumes:
       - telegram-bot-api-data:/var/lib/telegram-bot-api
     expose:
-      - "80:80
-
+      - "80:80"
 volumes:
   telegram-bot-api-data:

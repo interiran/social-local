@@ -1,9 +1,4 @@
 services:
-  worker:
-    build: .
-    restart: always
-    environment:
-      TELEGRAM_API_TOKEN: "<api-hash>"
   telegram-bot-api:
     image: aiogram/telegram-bot-api:latest
     restart: always
